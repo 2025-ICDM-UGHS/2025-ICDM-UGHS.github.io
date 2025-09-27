@@ -121,7 +121,7 @@ Submitted papers should present novel ideas, methodologies, algorithms, or appli
 - Paper Submission Deadline: ~~Sep 1, 2025 11:59 PM AoE~~ **Sep 10, 2025 11:59 PM AoE (Deadline Extended)**
 - Notification of Acceptance: Oct 1, 2025 
 - Camera-Ready Paper Submission: Oct 15, 2025
-- Symposium Date: TBD 
+- Symposium Date: Nov 15, 2025
 
 ## How to Submit
 - Please submit your papers electronically through the symposium's submission portal: [https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php](https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php).
