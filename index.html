@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IEEE ICDM 2025 UGHS — Undergraduate & High School Symposium</title>
+  <meta name="description" content="IEEE ICDM 2025: Undergraduate and High School Symposium (UGHS). Time: Nov 11–15, 2025 · Location: Washington D.C., USA. Topics, dates, submission, and program." />
+  <link rel="canonical" href="https://2025-icdm-ughs.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IEEE ICDM 2025: Undergraduate and High School Symposium" />
+  <meta property="og:description" content="UGHS at IEEE ICDM 2025 · Nov 11–15, 2025 · Washington D.C., USA." />
+  <meta property="og:url" content="https://2025-icdm-ughs.github.io/" />
+  <meta property="og:image" content="https://2025-icdm-ughs.github.io/assets/social-card.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --text:#111; --muted:#5a6372; --paper:#fff; --soft:#f7f9fc;
+      --brand:#C41E3A; --brand-2:#E03C31;
+      --hero-overlay: rgba(0,0,0,.45);
+      --nav-ink:#283042;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--text);background:var(--soft)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:980px;margin-inline:auto;padding:0 20px}
+
+    /* Sticky header */
+    header{
+      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
+      backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid #e7eaf0
+    }
+    /* 放宽头部容器，保证菜单排成一行 */
+    header .container{ max-width:1240px; }
+
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;min-height:56px;
+    }
+    /* 左侧品牌（固定不换行） */
+    .nav a.logo{
+      font-weight:800;font-size:18px;letter-spacing:.2px;color:var(--nav-ink);white-space:nowrap;
+    }
+    /* 右侧菜单（单行、不换行、必要时横向滚动） */
+    .nav .links{
+      margin-left:auto;display:flex;align-items:center;gap:20px;
+      flex-wrap:nowrap;white-space:nowrap;font-size:15px;
+      overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+    }
+    .nav .links::-webkit-scrollbar{ display:none; }
+    .nav .links a{color:var(--nav-ink);text-decoration:none;font-weight:600;}
+    .nav .links a:hover{ text-decoration:underline; }
+    @media (max-width:1100px){
+      .nav .links{ gap:16px;font-size:14px }
+      .nav a.logo{ font-size:17px }
+    }
+    @media (max-width:920px){
+      .nav .links{ gap:12px;font-size:13px }
+      .nav a.logo{ font-size:16px }
+    }
+
+ 
+    .hero{
+      color:#fff;min-height:52vh;display:flex;align-items:center;
+      background:
+        linear-gradient(0deg,var(--hero-overlay),var(--hero-overlay)),
+        url('assets/hero-dc-autumn.jpg') center/cover no-repeat;
+    }
+    .hero h1{margin:0 0 8px;font-size:40px;letter-spacing:.2px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+    .hero p{margin:6px 0 0;font-size:18px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+    .hero .hosted{margin-top:10px;font-size:14px}
+    .hero .hosted a{color:#fff;text-decoration:underline}
+
+    /* Sections */
+    main section{padding:42px 0}
+    h2{font-size:24px;margin:0 0 12px}
+    ul{padding-left:20px}
+    .sep{border:none;height:1px;background:#e7eaf0;margin:28px 0}
+    .small{font-size:14px;color:var(--muted)}
+    footer{padding:36px 0;color:var(--muted);border-top:1px solid #e7eaf0}
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Event",
+    "name":"IEEE ICDM 2025 Undergraduate and High School Symposium (UGHS)",
+    "startDate":"2025-11-15",
+    "endDate":"2025-11-15",
+    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus":"https://schema.org/EventScheduled",
+    "location":{"@type":"Place","name":"Washington D.C., USA","address":"Washington, DC, USA"},
+    "organizer":{"@type":"Organization","name":"IEEE ICDM"},
+    "superEvent":{
+      "@type":"Event",
+      "name":"IEEE ICDM 2025",
+      "startDate":"2025-11-11",
+      "endDate":"2025-11-15",
+      "url":"https://www3.cs.stonybrook.edu/~icdm2025/index.html"
+    },
+    "url":"https://2025-icdm-ughs.github.io/"
+  }
+  </script>
+</head>
+<body>
+  <!-- Top Nav -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top">IEEE ICDM 2025 UGHS</a>
+      <nav class="links" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#why">Why</a>
+        <a href="#intro">Introduction</a>
+        <a href="#topics">Scope of Topics</a>
+        <a href="#eligibility">Eligibility</a>
+        <a href="#format">Submission Format</a>
+        <a href="#dates">Important Dates</a>
+        <a href="#submit">How to Submit</a>
+        <a href="#program">Program Agenda</a>
+        <a href="#chairs">Program Co-Chairs</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero" id="top" role="region" aria-label="Intro Banner">
+    <div class="container">
+      <h1>IEEE ICDM 2025 UGHS Symposium</h1>
+      <p><strong>IEEE ICDM 2025: Undergraduate and High School Symposium</strong></p>
+      <p><strong>Time:</strong> Nov 11–15, 2025</p>
+      <p><strong>Location:</strong> Washington D.C., USA</p>
+      <p class="hosted">Hosted with the <a href="https://www3.cs.stonybrook.edu/~icdm2025/index.html">IEEE International Conference on Data Mining (ICDM) 2025</a>.</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="container" id="home">
+    <section id="why" aria-labelledby="why-h2">
+      <h2 id="why-h2">Why Participate in this Symposium?</h2>
+      <ul>
+        <li>Present your research to an international audience at one of the premier data mining conferences.</li>
+        <li>Compete for Outstanding Paper Awards, Runner-Up Awards, and Rising Star Awards honoring exceptional student contributions.</li>
+        <li>Interact directly with top AI researchers, industry innovators, and NSF Program Directors.</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="intro" aria-labelledby="intro-h2">
+      <h2 id="intro-h2">Introduction</h2>
+      <p>We are delighted to announce the 2nd Undergraduate and High School Symposium, to be held as part of the IEEE ICDM 2025 Conference. This symposium aims to provide a platform for young researchers to showcase their innovative work in the field of data mining and related disciplines.</p>
+      <hr class="sep" />
+    </section>
+
+    <section id="topics" aria-labelledby="topics-h2">
+      <h2 id="topics-h2">Scope of Topics</h2>
+      <p>We invite submissions of original research papers from undergraduate and high school students on topics related to data mining, including but not limited to:</p>
+      <ul>
+        <li>Foundations, algorithms, models, and theory of data mining, including big data mining</li>
+        <li>Machine learning, deep learning, and statistical methods for big data</li>
+        <li>Mining heterogeneous data sources, including text, semi-structured, spatio-temporal, streaming, graph, web, and multimedia data</li>
+        <li>Data mining systems and platforms for analyzing big data, including methods for parallel and distributed data mining, federated learning, and their efficiency, scalability, security, and privacy</li>
+        <li>Data mining for modeling, visualization, personalization, and recommendation</li>
+        <li>Data mining for cyber-physical systems and complex, time-evolving networks</li>
+        <li>Data mining with large language models</li>
+        <li>Novel applications of data mining in data science, including big data analysis in social sciences, physical sciences, engineering, life sciences, climate science, web, marketing, finance, precision medicine, health informatics, and other domains</li>
+      </ul>
+      <p>Submitted papers should present novel ideas, methodologies, algorithms, or applications in the realm of data mining. Papers will be evaluated based on their technical quality, novelty, relevance, and clarity of presentation.</p>
+      <hr class="sep" />
+    </section>
+
+    <section id="eligibility" aria-labelledby="eligibility-h2">
+      <h2 id="eligibility-h2">Eligibility</h2>
+      <ul>
+        <li>Undergraduate students and high school students pursuing an academic degree at the time of submission are eligible to submit papers as first authors.</li>
+        <li>Each submission must have at least one student author, who should be the presenter if the paper is accepted.</li>
+        <li>Co-authorship with faculty members or researchers is allowed, but the student must be the primary contributor to the work.</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="format" aria-labelledby="format-h2">
+      <h2 id="format-h2">Submission Format Requirements</h2>
+      <ul>
+        <li>Submissions must adhere to the IEEE Computer Society Proceedings Manuscript Formatting Guidelines (see link to “formatting instructions” below: <a href="https://www.ieee.org/conferences/publishing/templates.html">https://www.ieee.org/conferences/publishing/templates.html</a>).</li>
+        <li>Undergraduate student research papers should not exceed 6 pages, including all figures, tables, and references.</li>
+        <li>High school student research papers should not exceed 5 pages, including all figures, tables, and references.</li>
+        <li>Please highlight whether the first author is a high school or an undergraduate student in the author affiliation of your submitted paper.</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="dates" aria-labelledby="dates-h2">
+      <h2 id="dates-h2">Important Dates</h2>
+      <ul>
+        <li><strong>Paper Submission Deadline:</strong> Sep 1, 2025 11:59 PM AoE</li>
+        <li><strong>Paper Submission Deadline (Deadline Extended):</strong> Sep 10, 2025 11:59 PM AoE</li>
+        <li><strong>Notification of Acceptance:</strong> Oct 1, 2025</li>
+        <li><strong>Camera-Ready Paper Submission:</strong> Oct 15, 2025</li>
+        <li><strong>Symposium Date:</strong> Nov 15, 2025</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="submit" aria-labelledby="submit-h2">
+      <h2 id="submit-h2">How to Submit</h2>
+      <ul>
+        <li>Please submit your papers electronically through the symposium’s submission portal:
+          <a href="https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php">https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php</a>.
+        </li>
+        <li>The review process is <strong>single-blind</strong>, meaning that reviewers remain anonymous to the authors, but authors are not anonymous to the reviewers.</li>
+        <li>All papers accepted by this symposium will be included in the ICDM Workshop Proceedings published by the IEEE Computer Society Press, and made available at the Conference.</li>
+        <li>Each accepted paper must have at least one author to register the conference and present the paper in person during the symposium day at the conference.</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="program" aria-labelledby="program-h2">
+      <h2 id="program-h2">Program Agenda</h2>
+      <p>Below is a tentative schedule for our one-day symposium:</p>
+      <ul>
+        <li>9:00 – 9:10 am: Opening Remarks</li>
+        <li>9:10 – 10:00 am: Keynote by NSF Program Director</li>
+        <li>10:00 – 10:30 am: Coffee Break</li>
+        <li>10:30 – 11:00 am: Fireside Chat with Dr. Jure Leskovec (CS@Stanford)</li>
+        <li>11:00 – 12:00 pm: Oral Session 1</li>
+        <li>12:00 – 2:00 pm: Poster Session (lunch on your own)</li>
+        <li>2:00 – 3:00 pm: Panel with Parents (Next Generation AI Education)</li>
+        <li>3:00 – 4:00 pm: Oral Session 2</li>
+        <li>4:00 – 4:30 pm: Coffee Break</li>
+        <li>4:30 – 4:50 pm: Best Paper Award Announcement</li>
+        <li>4:50 – 5:00 pm: Closing Remarks</li>
+      </ul>
+      <hr class="sep" />
+    </section>
+
+    <section id="chairs" aria-labelledby="chairs-h2">
+      <h2 id="chairs-h2">Program Co-Chairs</h2>
+      <p>Join us in shaping the future of data mining research by sharing your insights and discoveries at the Undergraduate and High School Symposium. We look forward to receiving your submissions and to an engaging and enriching event at IEEE ICDM 2025 Conference. For further information or any questions regarding submissions, please contact the Undergraduate and High School Symposium Co-Chairs, Dr. Xuan Wang and Dr. Yanjie Fu at <a href="mailto:ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu">ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu</a>.</p>
+    </section>
+
+    <p class="small"><a href="#top">Back to top ↑</a></p>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>IEEE ICDM 2025 UGHS Symposium</div>
+      <div class="small">cc by-sa 2025 Xuan Wang</div>
+    </div>
+  </footer>
+</body>
+</html>
