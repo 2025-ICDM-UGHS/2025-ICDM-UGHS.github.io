@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,101 +15,216 @@
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
+    /* ======= Design tokens ======= */
     :root{
-      --text:#111; --muted:#5a6372; --paper:#fff; --soft:#f7f9fc;
-      --brand:#C41E3A; --brand-2:#E03C31;
-      --hero-overlay: rgba(0,0,0,.45);
-      --nav-ink:#283042;
+      --text:#10131a; --muted:#5a6372; --paper:#fff; --soft:#f7f9fc;
+      --brand:#C41E3A;                    /* maple leaf red */
+      --hero-overlay: rgba(0,0,0,.30);     /* 更亮一点，图片更通透 */
+      /* top-nav palette */
+      --nav-bg:#0d0f12;
+      --nav-ink:#b8beca;
+      --nav-ink-hover:#ffffff;
+      --nav-ink-brand:#ffffff;
+      --divider:#23262b;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--text);background:var(--soft)}
+    body{margin:0;font:17px/1.75 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;color:var(--text);background:var(--soft)}
     a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    .container{max-width:980px;margin-inline:auto;padding:0 20px}
 
-    /* Sticky header */
+    /* 宽一点，让正文与 SIGSPATIAL 视觉一致 */
+    .container{max-width:1120px;margin-inline:auto;padding:0 24px}
+
+    /* ======= Top nav (black bg, brand left / menu right) ======= */
     header{
-      position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);
-      backdrop-filter:saturate(150%) blur(6px);border-bottom:1px solid #e7eaf0
+      position:sticky; top:0; z-index:50;
+      background:var(--nav-bg);
+      border-bottom:1px solid var(--divider);
     }
-    /* 放宽头部容器，保证菜单排成一行 */
-    header .container{ max-width:1240px; }
-
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:16px;min-height:56px;
-    }
-    /* 左侧品牌（固定不换行） */
+    header .container{ max-width:1360px; }
+    .nav{ display:flex; align-items:center; gap:16px; min-height:66px; }
     .nav a.logo{
-      font-weight:800;font-size:18px;letter-spacing:.2px;color:var(--nav-ink);white-space:nowrap;
+      color:var(--nav-ink-brand); font-weight:800; font-size:20px;
+      letter-spacing:.2px; white-space:nowrap;
     }
-    /* 右侧菜单（单行、不换行、必要时横向滚动） */
     .nav .links{
-      margin-left:auto;display:flex;align-items:center;gap:20px;
-      flex-wrap:nowrap;white-space:nowrap;font-size:15px;
-      overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;
+      margin-left:auto; display:flex; align-items:center; gap:22px;
+      flex-wrap:nowrap; white-space:nowrap;
+      overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
+      border-left:1px solid var(--divider); padding-left:22px;
     }
     .nav .links::-webkit-scrollbar{ display:none; }
-    .nav .links a{color:var(--nav-ink);text-decoration:none;font-weight:600;}
-    .nav .links a:hover{ text-decoration:underline; }
+    .nav .links a{ color:var(--nav-ink); font-weight:600; text-decoration:none; }
+    .nav .links a:hover{ color:var(--nav-ink-hover); }
+
     @media (max-width:1100px){
-      .nav .links{ gap:16px;font-size:14px }
-      .nav a.logo{ font-size:17px }
+      .nav .links{ gap:16px; font-size:14px }
+      .nav a.logo{ font-size:18px }
     }
     @media (max-width:920px){
-      .nav .links{ gap:12px;font-size:13px }
-      .nav a.logo{ font-size:16px }
+      .nav .links{ gap:12px; font-size:13px }
+      .nav a.logo{ font-size:17px }
     }
 
-     
+    /* ======= Hero (Retina 清晰、居中、更大) ======= */
     .hero{
-      color:#fff;min-height:52vh;display:flex;align-items:center;
-    
-      /* 分行写，避免简写解析问题；并用绝对地址 */
+      color:#fff; min-height:78vh; display:flex; align-items:center;
+      /* 用 image-set 提供 2x 高清版本（若无则回退 1x） */
       background-image:
         linear-gradient(0deg,var(--hero-overlay),var(--hero-overlay)),
-        url('https://2025-icdm-ughs.github.io/images/hero-dc-autumn.jpg');
-      background-position: center, center;
-      background-size: auto, cover;
-      background-repeat: no-repeat, no-repeat;
-    }  
-    .hero h1{margin:0 0 8px;font-size:40px;letter-spacing:.2px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-    .hero p{margin:6px 0 0;font-size:18px;text-shadow:0 2px 10px rgba(0,0,0,.45)}
-    .hero .hosted{margin-top:10px;font-size:14px}
-    .hero .hosted a{color:#fff;text-decoration:underline}
+        -webkit-image-set(url('https://2025-icdm-ughs.github.io/images/hero-dc-autumn.jpg') 1x,
+                          url('https://2025-icdm-ughs.github.io/images/hero-dc-autumn_1.jpg') 2x);
+      background-image:
+        linear-gradient(0deg,var(--hero-overlay),var(--hero-overlay)),
+        image-set(url('https://2025-icdm-ughs.github.io/images/hero-dc-autumn.jpg') 1x,
+                  url('https://2025-icdm-ughs.github.io/images/hero-dc-autumn_1.jpg') 2x);
+      background-position:center,center;
+      background-size:auto,cover;
+      background-repeat:no-repeat,no-repeat;
+    }
+    .hero .container{ text-align:center; max-width:1120px; }
+    .hero h1{
+      margin:0 0 12px;
+      font-size:clamp(52px, 7.2vw, 88px);
+      font-weight:800; line-height:1.06;
+      text-shadow:0 8px 28px rgba(0,0,0,.40), 0 3px 12px rgba(0,0,0,.35);
+    }
+    .hero p{ margin:8px 0 0; font-size:clamp(20px, 2.6vw, 28px); text-shadow:0 2px 10px rgba(0,0,0,.35) }
+    .hero .hosted{ margin-top:14px; font-size:16px; opacity:.98 }
+    .hero .hosted a{ color:#fff; text-decoration:underline }
 
-    /* Sections */
-    main section{padding:42px 0}
-    h2{font-size:24px;margin:0 0 12px}
-    ul{padding-left:20px}
-    .sep{border:none;height:1px;background:#e7eaf0;margin:28px 0}
-    .small{font-size:14px;color:var(--muted)}
-    footer{padding:36px 0;color:var(--muted);border-top:1px solid #e7eaf0}
+    /* ======= Sections（更宽更大的正文） ======= */
+    main section{ padding:48px 0 }
+    h2{ font-size:28px; margin:0 0 14px }
+    p{ margin:10px 0 }
+    ul{ padding-left:22px; margin:10px 0 }
+    li{ margin:6px 0; }
+    .sep{ border:none; height:1px; background:#e3e7ef; margin:30px 0 }
+    .small{ font-size:14px; color:var(--muted) }
+    footer{ padding:40px 0; color:var(--muted); border-top:1px solid #e7eaf0 }
+
+	/* ---- Agenda table ---- */
+.agenda{ margin-top:12px; }
+.agenda .note{ color:var(--muted); margin:8px 0 16px; }
+.agenda table{
+  width:100%;
+  border-collapse:collapse;
+  border:1px solid #cfd6e4;
+  background:#fff;
+  font-size:16px;
+}
+.agenda th,.agenda td{ padding:12px 14px; border:1px solid #cfd6e4; vertical-align:top; }
+.agenda thead .day-hdr{
+  background:#fff; text-align:center; font-size:18px; font-weight:700;
+}
+.agenda thead th{ background:#f7f9fc; font-weight:700; }
+.agenda tbody td:first-child{ width:160px; white-space:nowrap; }
+.agenda tbody td:last-child{ width:220px; }
+
+/* 窄屏略缩字，保持可读 */
+@media (max-width: 720px){
+  .agenda table{ font-size:14px; }
+  .agenda tbody td:first-child,.agenda tbody td:last-child{ width:auto; }
+}
+
+/* ===== Topics of Interest (card style) ===== */
+.topics-note{ color:var(--muted); margin:8px 0 18px; }
+
+/* 主题卡片：柔和边框 + 圆角 + 头部色条 */
+.topic-card{
+  --tone-border:#cfe0ff;   /* 外框色 */
+  --tone-head:#e8f0ff;     /* 头条色 */
+  background:#f9fbff;
+  border:2px solid var(--tone-border);
+  border-radius:12px;
+  padding:12px;
+  margin:16px 0 18px;
+}
+.topic-card .topic-head{
+  background:var(--tone-head);
+  border-radius:8px;
+  padding:10px 14px;
+  font-weight:700;
+}
+
+/* 列表主体：白底 + 细分割线 + 自动编号 */
+.topic-list{
+  list-style:none;
+  margin:10px 0 0;
+  padding:0;
+  border:1px solid #e4e9f3;
+  border-radius:8px;
+  overflow:hidden;
+  background:#fff;
+  counter-reset:item;
+}
+.topic-list li{
+  padding:11px 14px;
+  border-top:1px solid #eef2f8;
+}
+.topic-list li:first-child{ border-top:none; }
+.topic-list li::before{
+  counter-increment:item;
+  content: counter(item) ". ";
+  font-weight:700;
+  color:#4b5a73;
+  margin-right:6px;
+}
+
+/* 可选：不同色调的卡片（如果以后拆成多卡片用得到） */
+.topic-card.tone-rose { --tone-border:#e8c7cc; --tone-head:#f6dee1; background:#fffafa; }
+.topic-card.tone-sky  { --tone-border:#cbe7fb; --tone-head:#e6f4fe; background:#f8fcff; }
+.topic-card.tone-cyan { --tone-border:#c7e8e8; --tone-head:#e2f5f5; background:#f8fefe; }
+.topic-card.tone-gray { --tone-border:#d8dbe2; --tone-head:#f0f1f4; background:#fbfbfc; }
+
+
+/* ---- Program Co-Chairs ---- */
+.chairs{ margin-top:12px; }
+.chairs-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:32px 44px;
+  align-items:start;
+}
+.person{
+  text-align:center;
+  padding:16px 8px;
+  background:transparent;
+}
+.person .avatar{
+  width:180px; height:180px;
+  border-radius:50%;
+  object-fit:cover;
+  display:inline-block;
+  border:6px solid #fff;
+  box-shadow:0 3px 16px rgba(16,19,26,.1);
+  background:#f0f3f8;
+  margin-bottom:14px;
+}
+.person .name{ font-size:26px; font-weight:800; margin:6px 0 6px; }
+.person .role{ font-style:italic; color:#3b4453; margin-bottom:4px; }
+.person .aff{ font-style:italic; color:#3b4453; margin-bottom:6px; }
+.person .email a{ color:var(--muted); text-decoration:none; }
+.person .email a:hover{ text-decoration:underline; color:var(--brand); }
+
+/* 窄屏稍小一点 */
+@media (max-width: 520px){
+  .person .avatar{ width:150px; height:150px; }
+  .person .name{ font-size:22px; }
+}
+
+/* Old deadline strike-through */
+.deadline-old{
+  color:#9aa3b2;                         /* 旧日期变灰 */
+  text-decoration: line-through;
+  text-decoration-thickness: 3px;        /* 线条粗细 */
+  text-decoration-color:#9aa3b2;         /* 删除线颜色 */
+}
+
+
   </style>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Event",
-    "name":"IEEE ICDM 2025 Undergraduate and High School Symposium (UGHS)",
-    "startDate":"2025-11-15",
-    "endDate":"2025-11-15",
-    "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
-    "eventStatus":"https://schema.org/EventScheduled",
-    "location":{"@type":"Place","name":"Washington D.C., USA","address":"Washington, DC, USA"},
-    "organizer":{"@type":"Organization","name":"IEEE ICDM"},
-    "superEvent":{
-      "@type":"Event",
-      "name":"IEEE ICDM 2025",
-      "startDate":"2025-11-11",
-      "endDate":"2025-11-15",
-      "url":"https://www3.cs.stonybrook.edu/~icdm2025/index.html"
-    },
-    "url":"https://2025-icdm-ughs.github.io/"
-  }
-  </script>
 </head>
 <body>
   <!-- Top Nav -->
@@ -159,22 +275,32 @@
       <hr class="sep" />
     </section>
 
-    <section id="topics" aria-labelledby="topics-h2">
-      <h2 id="topics-h2">Scope of Topics</h2>
-      <p>We invite submissions of original research papers from undergraduate and high school students on topics related to data mining, including but not limited to:</p>
-      <ul>
-        <li>Foundations, algorithms, models, and theory of data mining, including big data mining</li>
-        <li>Machine learning, deep learning, and statistical methods for big data</li>
-        <li>Mining heterogeneous data sources, including text, semi-structured, spatio-temporal, streaming, graph, web, and multimedia data</li>
-        <li>Data mining systems and platforms for analyzing big data, including methods for parallel and distributed data mining, federated learning, and their efficiency, scalability, security, and privacy</li>
-        <li>Data mining for modeling, visualization, personalization, and recommendation</li>
-        <li>Data mining for cyber-physical systems and complex, time-evolving networks</li>
-        <li>Data mining with large language models</li>
-        <li>Novel applications of data mining in data science, including big data analysis in social sciences, physical sciences, engineering, life sciences, climate science, web, marketing, finance, precision medicine, health informatics, and other domains</li>
-      </ul>
-      <p>Submitted papers should present novel ideas, methodologies, algorithms, or applications in the realm of data mining. Papers will be evaluated based on their technical quality, novelty, relevance, and clarity of presentation.</p>
-      <hr class="sep" />
-    </section>
+   <section id="topics" aria-labelledby="topics-h2">
+  <h2 id="topics-h2">Scope of Topics</h2>
+  <p class="topics-note">
+    We invite submissions of original research papers from undergraduate and high school students on topics related to data mining, including but not limited to:
+  </p>
+
+  <!-- 一张“主题卡片”包住全部条目；若以后想拆多卡片，可复制这个 .topic-card 并换 tone-* 类名 -->
+  <div class="topic-card">
+    <div class="topic-head">Topics of Interest</div>
+    <ol class="topic-list">
+      <li>Foundations, algorithms, models, and theory of data mining, including big data mining</li>
+      <li>Machine learning, deep learning, and statistical methods for big data</li>
+      <li>Mining heterogeneous data sources, including text, semi-structured, spatio-temporal, streaming, graph, web, and multimedia data</li>
+      <li>Data mining systems and platforms for analyzing big data, including methods for parallel and distributed data mining, federated learning, and their efficiency, scalability, security, and privacy</li>
+      <li>Data mining for modeling, visualization, personalization, and recommendation</li>
+      <li>Data mining for cyber-physical systems and complex, time-evolving networks</li>
+      <li>Data mining with large language models</li>
+      <li>Novel applications of data mining in data science, including big data analysis in social sciences, physical sciences, engineering, life sciences, climate science, web, marketing, finance, precision medicine, health informatics, and other domains</li>
+    </ol>
+  </div>
+
+  <p>Submitted papers should present novel ideas, methodologies, algorithms, or applications in the realm of data mining. Papers will be evaluated based on their technical quality, novelty, relevance, and clarity of presentation.</p>
+
+  <hr class="sep" />
+</section>
+
 
     <section id="eligibility" aria-labelledby="eligibility-h2">
       <h2 id="eligibility-h2">Eligibility</h2>
@@ -197,17 +323,20 @@
       <hr class="sep" />
     </section>
 
-    <section id="dates" aria-labelledby="dates-h2">
-      <h2 id="dates-h2">Important Dates</h2>
-      <ul>
-        <li><strong>Paper Submission Deadline:</strong> Sep 1, 2025 11:59 PM AoE</li>
-        <li><strong>Paper Submission Deadline (Deadline Extended):</strong> Sep 10, 2025 11:59 PM AoE</li>
-        <li><strong>Notification of Acceptance:</strong> Oct 1, 2025</li>
-        <li><strong>Camera-Ready Paper Submission:</strong> Oct 15, 2025</li>
-        <li><strong>Symposium Date:</strong> Nov 15, 2025</li>
-      </ul>
-      <hr class="sep" />
-    </section>
+<section id="dates" aria-labelledby="dates-h2">
+  <h2 id="dates-h2">Important Dates</h2>
+  <ul>
+    <li><strong>Paper Submission Deadline:</strong>
+      <del class="deadline-old">Sep 1, 2025 11:59 PM AoE</del>
+    </li>
+    <li><strong>Paper Submission Deadline (Deadline Extended):</strong> Sep 10, 2025 11:59 PM AoE</li>
+    <li><strong>Notification of Acceptance:</strong> Oct 1, 2025</li>
+    <li><strong>Camera-Ready Paper Submission:</strong> Oct 15, 2025</li>
+    <li><strong>Symposium Date:</strong> Nov 15, 2025</li>
+  </ul>
+  <hr class="sep" />
+</section>
+
 
     <section id="submit" aria-labelledby="submit-h2">
       <h2 id="submit-h2">How to Submit</h2>
@@ -222,29 +351,80 @@
       <hr class="sep" />
     </section>
 
-    <section id="program" aria-labelledby="program-h2">
-      <h2 id="program-h2">Program Agenda</h2>
-      <p>Below is a tentative schedule for our one-day symposium:</p>
-      <ul>
-        <li>9:00 – 9:10 am: Opening Remarks</li>
-        <li>9:10 – 10:00 am: Keynote by NSF Program Director</li>
-        <li>10:00 – 10:30 am: Coffee Break</li>
-        <li>10:30 – 11:00 am: Fireside Chat with Dr. Jure Leskovec (CS@Stanford)</li>
-        <li>11:00 – 12:00 pm: Oral Session 1</li>
-        <li>12:00 – 2:00 pm: Poster Session (lunch on your own)</li>
-        <li>2:00 – 3:00 pm: Panel with Parents (Next Generation AI Education)</li>
-        <li>3:00 – 4:00 pm: Oral Session 2</li>
-        <li>4:00 – 4:30 pm: Coffee Break</li>
-        <li>4:30 – 4:50 pm: Best Paper Award Announcement</li>
-        <li>4:50 – 5:00 pm: Closing Remarks</li>
-      </ul>
-      <hr class="sep" />
-    </section>
+<section id="program" aria-labelledby="program-h2">
+  <h2 id="program-h2">Program Agenda</h2>
+
+  <div class="agenda">
+    <p id="program-note" class="note">Below is a tentative schedule for our one-day symposium.</p>
+
+    <table aria-describedby="program-note">
+      <thead>
+        <tr>
+          <th class="day-hdr" colspan="3">November 15, 2025 (Location: Room TBD)</th>
+        </tr>
+        <tr>
+          <th scope="col">Time</th>
+          <th scope="col">Event</th>
+          <th scope="col">Speaker</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>09:00–09:10</td><td>Opening Remarks</td><td>Organizers</td></tr>
+        <tr><td>09:10–10:00</td><td>Keynote</td><td>NSF Program Director (TBD)</td></tr>
+        <tr><td>10:00–10:30</td><td>Coffee Break</td><td>—</td></tr>
+        <tr><td>10:30–11:00</td><td>Fireside Chat with Dr. Jure Leskovec (CS@Stanford)</td><td>Moderator: TBD</td></tr>
+        <tr><td>11:00–12:00</td><td>Oral Session 1</td><td>TBD</td></tr>
+        <tr><td>12:00–14:00</td><td>Poster Session (lunch on your own)</td><td>TBD</td></tr>
+        <tr><td>14:00–15:00</td><td>Panel with Parents (Next Generation AI Education)</td><td>TBD</td></tr>
+        <tr><td>15:00–16:00</td><td>Oral Session 2</td><td>TBD</td></tr>
+        <tr><td>16:00–16:30</td><td>Coffee Break</td><td>—</td></tr>
+        <tr><td>16:30–16:50</td><td>Best Paper Award Announcement</td><td>Organizers</td></tr>
+        <tr><td>16:50–17:00</td><td>Closing Remarks</td><td>Organizers</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="sep" />
+</section>
+
 
     <section id="chairs" aria-labelledby="chairs-h2">
-      <h2 id="chairs-h2">Program Co-Chairs</h2>
-      <p>Join us in shaping the future of data mining research by sharing your insights and discoveries at the Undergraduate and High School Symposium. We look forward to receiving your submissions and to an engaging and enriching event at IEEE ICDM 2025 Conference. For further information or any questions regarding submissions, please contact the Undergraduate and High School Symposium Co-Chairs, Dr. Xuan Wang and Dr. Yanjie Fu at <a href="mailto:ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu">ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu</a>.</p>
-    </section>
+  <h2 id="chairs-h2">Program Co-Chairs</h2>
+
+  <p class="small">
+    Join us in shaping the future of data mining research by sharing your insights and discoveries at the Undergraduate and High School Symposium.
+    For questions, please contact the symposium co-chairs.
+  </p>
+
+  <div class="chairs">
+    <div class="chairs-grid">
+
+      <!-- Xuan Wang -->
+      <article class="person" itemscope itemtype="https://schema.org/Person">
+        <img class="avatar" src="https://2025-icdm-ughs.github.io/images/Xuan2016.jpg" alt="Portrait of Xuan Wang" width="360" height="360" itemprop="image">
+        <div class="name" itemprop="name">Xuan Wang</div>
+        <div class="role">Assistant Professor</div>
+        <div class="aff" itemprop="affiliation">Virginia Tech</div>
+        <div class="email"><a href="mailto:xuanw@vt.edu" itemprop="email">xuanw@vt.edu</a></div>
+      </article>
+
+      <!-- Yanjie Fu -->
+      <article class="person" itemscope itemtype="https://schema.org/Person">
+        <img class="avatar" src="https://2025-icdm-ughs.github.io//images/yanjiefu.jpg" alt="Portrait of Yanjie Fu" width="320" height="320" itemprop="image">
+        <div class="name" itemprop="name">Yanjie Fu</div>
+	<div class="role">Associate Professor</div>
+        <div class="aff" itemprop="affiliation">Arizona State University</div>
+        <div class="email"><a href="mailto:yanjie.fu@asu.edu" itemprop="email">yanjie.fu@asu.edu</a></div>
+      </article>
+
+    </div>
+  </div>
+
+  <p class="small" style="margin-top:10px">
+    For general inquiries: <a href="mailto:ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu">ieee-icdm-2025-undergraduate-and-high-school-symposium-g@vt.edu</a>
+  </p>
+</section>
+
 
     <p class="small"><a href="#top">Back to top ↑</a></p>
   </main>
@@ -257,5 +437,3 @@
   </footer>
 </body>
 </html>
-
-
