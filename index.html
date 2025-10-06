@@ -99,6 +99,37 @@
     .topic-card.tone-cyan { --tone-border:#c7e8e8; --tone-head:#e2f5f5; background:#f8fefe; }
     .topic-card.tone-gray { --tone-border:#d8dbe2; --tone-head:#f0f1f4; background:#fbfbfc; }
 
+	  /* ---- Submit & Camera-ready tidy layout ---- */
+	  .card{
+	  background:#fff;
+	  border:1px solid #e4e9f3;
+	  border-radius:12px;
+	  padding:16px 18px;
+	  box-shadow:0 2px 8px rgba(16,19,26,.04);
+	  margin:14px 0 18px;
+		}
+	.card h3{ margin:4px 0 10px; }
+	
+	.actions{
+	  display:flex; flex-wrap:wrap; gap:12px;
+	  margin:4px 0 12px;
+	}
+	.btn{
+	  display:inline-block; padding:10px 14px; border-radius:10px;
+	  background:var(--brand); color:#fff; font-weight:700; text-decoration:none;
+	}
+	.btn:hover{ text-decoration:none; opacity:.95; }
+	.btn.secondary{
+	  background:#f7f9fc; color:#10131a; border:1px solid #dbe3f1;
+	  font-weight:600;
+	}
+
+
+	.list.clean{ padding-left:20px; margin:8px 0 0; }
+	.list.clean li{ margin:6px 0; }
+	
+	code { background:#f5f7fb; border:1px solid #e6ebf4; padding:1px 6px; border-radius:6px; }
+
     /* ---- Program Co-Chairs ---- */
     .chairs{ margin-top:12px; }
     .chairs-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:32px 44px; align-items:start; }
@@ -361,36 +392,48 @@
 
 <section id="submit" aria-labelledby="submit-h2">
   <h2 id="submit-h2">How to Submit</h2>
-  <ul>
-    <li>Please submit your papers electronically through the symposium’s submission portal:
-      <a href="https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php">https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php</a>.
-    </li>
-    <li>The review process is <strong>single-blind</strong>, meaning that reviewers remain anonymous to the authors, but authors are not anonymous to the reviewers.</li>
-    <li>All papers accepted by this symposium will be included in the ICDM Workshop Proceedings published by the IEEE Computer Society Press, and made available at the Conference.</li>
-    <li>Each accepted paper must have at least one author to register the conference and present the paper in person during the symposium day at the conference.</li>
-  </ul>
 
-  <h3 id="camera-ready">Camera-Ready Submission</h3>
-  <p><strong>Final deadline:</strong> October 15, 2025.</p>
-  <p>
-    The camera-ready paper must follow all formatting requirements (not a response to reviewer comments).
-    Please ensure that your paper adheres to the IEEE formatting and page limits as described on the ICDM 2025 website,
-    that all figures and images are of high clarity and resolution, and that the paper layout is clean and consistent.
-  </p>
-  <p>
-    <strong>Submission site:</strong>
-    <a href="https://ieeecps.org/cps/v2/auth/login?ak=1&pid=24XmCKZ1gAf1u24iyCTGnr" target="_blank" rel="noopener">
-      https://ieeecps.org/cps/v2/auth/login?ak=1&pid=24XmCKZ1gAf1u24iyCTGnr
-    </a>
-  </p>
-  <p><strong>PDF eXpress validation:</strong> use Conference Record #69685.</p>
-  <p>
-    If you encounter difficulties with copyright or submission, please contact
-    <a href="mailto:martha.nunez@contractor.ieee.org">Martha Nunez</a>.
-  </p>
+  <div class="card">
+    <div class="actions">
+      <a class="btn" href="https://wi-lab.com/cyberchair/2025/icdm25/scripts/submit.php?subarea=S01&undisplay_detail=1&wh=/cyberchair/2025/icdm25/scripts/ws_submit.php" target="_blank" rel="noopener">
+        Open Submission Portal
+      </a>
+      <a class="btn secondary" href="#camera-ready">Camera-Ready Instructions</a>
+    </div>
+
+    <ul class="list clean">
+      <li>The review process is <strong>single-blind</strong> (reviewers anonymous; authors visible to reviewers).</li>
+      <li>Accepted papers will appear in the ICDM Workshop Proceedings (IEEE Computer Society Press) and be available at the conference.</li>
+      <li>Each accepted paper must have <strong>at least one author registered</strong> and present in person during the symposium day.</li>
+    </ul>
+  </div>
+
+  <div class="card" id="camera-ready">
+    <h3>Camera-Ready Submission</h3>
+    <p><strong>Final deadline:</strong> October 15, 2025.</p>
+    <ul class="list clean">
+      <li>
+        The camera-ready paper must follow all formatting requirements
+        (not a response to reviewer comments). Ensure IEEE formatting/page limits per the ICDM 2025 website,
+        use high-clarity figures, and keep the layout clean and consistent.
+      </li>
+      <li>
+        <strong>Submission site:</strong>
+        <a class="btn" href="https://ieeecps.org/cps/v2/auth/login?ak=1&pid=24XmCKZ1gAf1u24iyCTGnr" target="_blank" rel="noopener">
+          IEEE CPS Login
+        </a>
+      </li>
+      <li><strong>PDF eXpress validation:</strong> Conference Record <code>69685</code>.</li>
+      <li>
+        Issues with copyright or submission? Contact
+        <a href="mailto:martha.nunez@contractor.ieee.org">Martha Nunez</a>.
+      </li>
+    </ul>
+  </div>
 
   <hr class="sep" />
 </section>
+
 
 
 
@@ -482,6 +525,7 @@
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
