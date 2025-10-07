@@ -31,10 +31,10 @@
     /* ======= Top nav ======= */
     header{position:sticky; top:0; z-index:50; background:var(--nav-bg); border-bottom:1px solid var(--divider)}
     header .container{ max-width:1680px; }
-    .nav{ display:flex; align-items:center; gap:16px; min-height:66px; }
-    .nav a.logo{ color:var(--nav-ink-brand); font-weight:800; font-size:20px; letter-spacing:.2px; white-space:nowrap; }
+    .nav{ display:flex; align-items:center; gap:16px; min-height:58px; }
+    .nav a.logo{ color:var(--nav-ink-brand); font-weight:800; font-size:18px; letter-spacing:.2px; white-space:nowrap; }
     .nav .links{
-      margin-left:auto; display:flex; align-items:center; gap:22px;
+      margin-left:auto; display:flex; align-items:center; gap:18px;
       flex-wrap:nowrap; white-space:nowrap;
       overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none;
       border-left:1px solid var(--divider); padding-left:22px;
@@ -130,6 +130,25 @@
 	
 	code { background:#f5f7fb; border:1px solid #e6ebf4; padding:1px 6px; border-radius:6px; }
 
+	  /* ---- Poster section ---- */
+	.poster-figure{
+	  margin:14px 0; padding:14px;
+	  background:#fff; border:1px solid #cfd6e4; border-radius:10px;
+	}
+	.board{
+	  width:640px; max-width:100%;
+	  aspect-ratio: 8 / 4;                 /* 8 ft × 4 ft */
+	  border:3px solid #9fb3d1; border-radius:8px;
+	  background:#f7fbff; position:relative; margin:auto;
+	}
+	.board::before{                       /* 中线把 8×4 分成两个 4×4 */
+	  content:""; position:absolute; left:50%; top:0; bottom:0;
+	  width:0; border-left:2px dashed #9fb3d1;
+	}
+	.caption{font-size:14px; color:var(--muted); text-align:center; margin-top:8px;}
+
+	  
+
     /* ---- Program Co-Chairs ---- */
     .chairs{ margin-top:12px; }
     .chairs-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:32px 44px; align-items:start; }
@@ -153,9 +172,10 @@
       <a class="logo" href="#top">IEEE ICDM 2025 UGHS</a>
       <nav class="links" aria-label="Primary">
 		  <a href="#home">Home</a>
-		  <a href="#intro">Introduction</a>
+		  <!-- <a href="#intro">Introduction</a> -->
 		  <a href="#why">Why</a>
 		  <a href="#program">Agenda</a>
+		  <a href="#poster">Poster</a> 
 		  <a href="#topics">Scope</a>
 		  <a href="#eligibility">Eligibility</a>
 		  <a href="#attendance">In-Person Policy</a>  
@@ -182,24 +202,19 @@
   </div>
 
   <!-- Content -->
-  <main class="container" id="home">
+<main class="container" id="content"><!-- 原来是 id="home"，改名或去掉 -->
 
-    <!-- Introduction moved before Why -->
-    <section id="intro" aria-labelledby="intro-h2">
-      <h2 id="intro-h2">Introduction</h2>
-      <p>We are delighted to announce the 2nd Undergraduate and High School Symposium, to be held as part of the IEEE ICDM 2025 Conference. This symposium aims to provide a platform for young researchers to showcase their innovative work in the field of data mining and related disciplines.</p>
-      <hr class="sep" />
-    </section>
-
-    <section id="why" aria-labelledby="why-h2">
-      <h2 id="why-h2">Why Participate in this Symposium?</h2>
-      <ul>
-        <li>Present your research to an international audience at one of the premier data mining conferences.</li>
-        <li>Compete for Outstanding Paper Awards, Runner-Up Awards, and Rising Star Awards honoring exceptional student contributions.</li>
-        <li>Interact directly with top AI researchers, industry innovators, and NSF Program Directors.</li>
-      </ul>
-      <hr class="sep" />
-    </section>
+  <!-- Home（原 Introduction） -->
+  <section id="home" aria-labelledby="home-h2">
+    <h2 id="home-h2">Home</h2>
+    <p>
+      We are delighted to announce the 2nd Undergraduate and High School Symposium,
+      to be held as part of the IEEE ICDM 2025 Conference. This symposium aims to
+      provide a platform for young researchers to showcase their innovative work in
+      the field of data mining and related disciplines.
+    </p>
+    <hr class="sep" />
+  </section>
 
 
 	<section id="program" aria-labelledby="program-h2">
@@ -278,6 +293,33 @@
 
   <hr class="sep" />
 </section>
+
+	  <section id="poster" aria-labelledby="poster-h2">
+  <h2 id="poster-h2">Poster Presentation</h2>
+
+  <ul>
+    <li>
+      <strong>Recommended size:</strong> A0 (33.1″ × 46.8″ / 841 mm × 1189 mm).
+      Portrait or landscape are both acceptable. Please ensure the poster fits within the allotted display area.
+    </li>
+    <li>
+      <strong>Display area:</strong> Each poster board is <strong>8 ft × 4 ft</strong> and double-sided.
+      Two posters will be displayed on each side, so each presenter has up to
+      <strong>4 ft × 4 ft (1.22 m × 1.22 m)</strong> including margins.
+    </li>
+    <li>
+      <strong>Mounting:</strong> Pushpins or tape may be used; both will be provided on site.
+    </li>
+  </ul>
+
+  <!-- 可选的示意图；不需要时可整块删除 -->
+  <div class="poster-figure" role="img"
+       aria-label="One 8 by 4 feet board split into two 4 by 4 poster spaces">
+    <div class="board"></div>
+    <p class="caption">Illustration: one 8′×4′ board with two 4′×4′ poster spaces per side.</p>
+  </div>
+</section>
+
 
     <section id="topics" aria-labelledby="topics-h2">
       <h2 id="topics-h2">Scope of Topics</h2>
@@ -530,6 +572,7 @@
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
