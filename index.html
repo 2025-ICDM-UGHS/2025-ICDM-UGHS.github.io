@@ -283,6 +283,18 @@
 .acc-table thead th{background:#f7f9fc; font-weight:700}
 
 
+.chairs-card{ margin:10px 0 14px; }
+.chairs-card details{
+  background:#fff; border:1px solid #e4e9f3; border-radius:10px;
+  padding:10px 12px; box-shadow:0 2px 8px rgba(16,19,26,.04);
+}
+.chairs-card summary{ cursor:pointer; font-weight:800; list-style:none; }
+.chairs-card summary::-webkit-details-marker{ display:none; }
+.chairs-card summary::after{ content:"▸"; float:right; color:#5a6372; transition:transform .2s; }
+.chairs-card details[open] summary::after{ transform:rotate(90deg); }
+
+.chairs-grid{ display:grid; grid-template-columns:72px 1fr; gap:6px 12px; margin-top:8px; }
+.chairs-grid .slot{ font-weight:700; color:#4b5a73; }
 
 
 	
@@ -1327,6 +1339,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
