@@ -489,10 +489,15 @@
     <div class="oral-accordion" id="oral-1400">
       <h4>14:00–15:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
       <div class="acc-tools">
-        <button class="acc-btn" type="button"
-          onclick="document.querySelectorAll('#oral-1400 details').forEach(d=>d.open=true)">Expand all</button>
-        <button class="acc-btn" type="button"
-          onclick="document.querySelectorAll('#oral-1400 details').forEach(d=>d.open=false)">Collapse all</button>
+		 <button class="acc-btn" type="button"
+		  onclick="document.querySelectorAll('#oral-1400 details.acc').forEach(d=>d.open=true)">
+		  Expand all
+		</button>
+		<button class="acc-btn" type="button"
+		  onclick="document.querySelectorAll('#oral-1400 details.acc').forEach(d=>d.open=false)">
+		  Collapse all
+		</button>
+
       </div>
 
 		<!-- Session Chairs (14:00–15:30) -->
@@ -666,10 +671,15 @@
     <div class="oral-accordion" id="oral-1600">
       <h4>16:00–17:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
       <div class="acc-tools">
-        <button class="acc-btn" type="button"
-          onclick="document.querySelectorAll('#oral-1600 details').forEach(d=>d.open=true)">Expand all</button>
-        <button class="acc-btn" type="button"
-          onclick="document.querySelectorAll('#oral-1600 details').forEach(d=>d.open=false)">Collapse all</button>
+		<button class="acc-btn" type="button"
+		  onclick="document.querySelectorAll('#oral-1600 details.acc').forEach(d=>d.open=true)">
+		  Expand all
+		</button>
+		<button class="acc-btn" type="button"
+		  onclick="document.querySelectorAll('#oral-1600 details.acc').forEach(d=>d.open=false)">
+		  Collapse all
+		</button>
+
       </div>
 
 		<!-- Session Chairs (16:00–17:30) -->
@@ -1377,6 +1387,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
