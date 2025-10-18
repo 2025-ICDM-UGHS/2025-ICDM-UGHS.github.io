@@ -86,6 +86,16 @@
     .agenda tbody td:last-child{ width:220px; }
     @media (max-width: 720px){ .agenda table{ font-size:14px; } .agenda tbody td:first-child,.agenda tbody td:last-child{ width:auto; } }
 
+	/* ---- Parent Panelists table ---- */
+	.table{ width:100%; border-collapse:collapse; border:1px solid #cfd6e4; background:#fff; font-size:16px; }
+	.table th,.table td{ padding:12px 14px; border:1px solid #cfd6e4; vertical-align:top; }
+	.table thead th{ background:#f7f9fc; font-weight:700; }
+	.table caption{ text-align:left; font-weight:800; padding:0 0 10px; }
+	@media (max-width:720px){
+	  .table{ font-size:14px; }
+	  .table td a{ word-break:break-all; }
+	}
+	  
 
 	/* --- Oral details (accordion) --- */
 	.view-btn{
@@ -471,7 +481,10 @@
         </tr>
         <tr>
           <td>11:30–12:25</td>
-          <td>Panel with Parents <span class="small">(50 mins)</span>: Next Generation AI Education</td>
+		  <td>Panel with Parents <span class="small">(50 mins)</span>: Next Generation AI Education
+		  <br><a class="small" href="#parent-panel">See panelists →</a>
+		  </td>
+
           <td>Panelists: TBD</td>
         </tr>
         <tr>
@@ -845,6 +858,63 @@
 
   <hr class="sep" />
 </section>
+
+	<section id="parent-panel" aria-labelledby="parent-panel-h2">
+  <h2 id="parent-panel-h2">Parent Panel — Panelists</h2>
+  <p class="small">This panel appears on Nov 15, 11:30–12:25 (see agenda above).</p>
+
+  <div class="table-wrap">
+    <table class="table" aria-describedby="parent-panel-h2">
+      <caption class="sr-only">Parent Panelists</caption>
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Affiliation</th>
+          <th scope="col">Title / Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Min Wu</td>
+          <td><a href="mailto:minwu@umd.edu">minwu@umd.edu</a></td>
+          <td>University of Maryland – College Park</td>
+          <td>
+            Distinguished University Professor; Associate Dean for Graduate Programs; 
+            Christine Yurie Kim Eminent Professor in Information Technology, Electrical and Computer Engineering
+          </td>
+        </tr>
+        <tr>
+          <td>Ambreen Hasan</td>
+          <td><a href="mailto:ambihasan@gmail.com">ambihasan@gmail.com</a></td>
+          <td>Youngstown State University</td>
+          <td>Director of Institutional Research and Analytics</td>
+        </tr>
+        <tr>
+          <td>Jianjun Xie</td>
+          <td><a href="mailto:jianjunxie@gmail.com">jianjunxie@gmail.com</a></td>
+          <td>FICO</td>
+          <td>Principal Scientist</td>
+        </tr>
+        <tr>
+          <td>Dhuruva Badri</td>
+          <td><a href="mailto:drubadri@gmail.com">drubadri@gmail.com</a></td>
+          <td>Florida Department of Transportation</td>
+          <td>Assistant District Construction Engineer</td>
+        </tr>
+        <tr>
+          <td>Tarun Thakur</td>
+          <td><a href="mailto:tarun.thakur@alumni.duke.edu">tarun.thakur@alumni.duke.edu</a></td>
+          <td>Veza</td>
+          <td>Co-Founder and CEO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="sep" />
+</section>
+
 
 
 	<section id="poster" aria-labelledby="poster-h2">
@@ -1387,6 +1457,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
