@@ -283,18 +283,42 @@
 .acc-table thead th{background:#f7f9fc; font-weight:700}
 
 
-.chairs-card{ margin:10px 0 14px; }
-.chairs-card details{
-  background:#fff; border:1px solid #e4e9f3; border-radius:10px;
-  padding:10px 12px; box-shadow:0 2px 8px rgba(16,19,26,.04);
+/* oral chair card */
+.chairs-card{
+  background:#fff; border:1px solid #e5e9f2; border-radius:12px;
+  padding:14px 16px; margin:14px 0 18px; box-shadow:0 2px 8px rgba(16,19,26,.04);
 }
-.chairs-card summary{ cursor:pointer; font-weight:800; list-style:none; }
-.chairs-card summary::-webkit-details-marker{ display:none; }
-.chairs-card summary::after{ content:"▸"; float:right; color:#5a6372; transition:transform .2s; }
-.chairs-card details[open] summary::after{ transform:rotate(90deg); }
+.chairs-card summary{
+  cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;
+  font-weight:800; color:#111827;
+}
+.chairs-card summary::-webkit-details-marker{ display:none }
 
-.chairs-grid{ display:grid; grid-template-columns:72px 1fr; gap:6px 12px; margin-top:8px; }
-.chairs-grid .slot{ font-weight:700; color:#4b5a73; }
+.chairs-grid{
+  /* 每个“编号+姓名”为一对进行排布 */
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:12px 22px;
+  margin-top:10px;
+}
+.chairs-pair{
+  display:grid;
+  grid-template-columns: 64px 1fr;        /* 左 64px 放 UH 编号，右边放姓名 */
+  align-items:center;
+  gap:10px;
+  min-width: 0;                            /* 防止长名字把格子撐爆 */
+}
+.chairs-pair .slot{
+  font-weight:800; color:#475569; letter-spacing:.2px;
+}
+.chairs-pair .name{
+  font-weight:600; color:#111827;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+
+/* 可选：右上角折叠小三角对齐 */
+.chairs-card[open] summary{ margin-bottom:6px }
+
 
 
 	
@@ -472,19 +496,32 @@
       </div>
 
 		<!-- Session Chairs (14:00–15:30) -->
-<div class="chairs-card" aria-label="Session Chairs 14:00–15:30">
-  <details>
-    <summary>Session Chairs — UH1–UH6</summary>
-    <div class="chairs-grid">
-      <div class="slot">UH1</div><div>Sanjay Madria</div>
-      <div class="slot">UH2</div><div>C.T. (Chang-Tien) Lu</div>
-      <div class="slot">UH3</div><div>Fang Jin</div>
-      <div class="slot">UH4</div><div>Haibing Lu</div>
-      <div class="slot">UH5</div><div>Mohammad Ali Javidian</div>
-      <div class="slot">UH6</div><div>Long Nguyen</div>
-    </div>
-  </details>
-</div>
+		<div class="chairs-card" aria-label="Session Chairs 14:00–15:30">
+		  <details open>
+		    <summary>Session Chairs — UH1–UH6</summary>
+		    <div class="chairs-grid">
+		      <div class="chairs-pair">
+		        <div class="slot">UH1</div><div class="name">Sanjay Madria</div>
+		      </div>
+		      <div class="chairs-pair">
+		        <div class="slot">UH2</div><div class="name">C.T. (Chang-Tien) Lu</div>
+		      </div>
+		      <div class="chairs-pair">
+		        <div class="slot">UH3</div><div class="name">Fang Jin</div>
+		      </div>
+		      <div class="chairs-pair">
+		        <div class="slot">UH4</div><div class="name">Haibing Lu</div>
+		      </div>
+		      <div class="chairs-pair">
+		        <div class="slot">UH5</div><div class="name">Mohammad Ali Javidian</div>
+		      </div>
+		      <div class="chairs-pair">
+		        <div class="slot">UH6</div><div class="name">Long Nguyen</div>
+		      </div>
+		    </div>
+		  </details>
+		</div>
+
 
 
       <!-- Room A -->
@@ -636,19 +673,20 @@
       </div>
 
 		<!-- Session Chairs (16:00–17:30) -->
-<div class="chairs-card" aria-label="Session Chairs 16:00–17:30">
-  <details>
-    <summary>Session Chairs — UH7–UH12</summary>
-    <div class="chairs-grid">
-      <div class="slot">UH7</div><div>Yi He</div>
-      <div class="slot">UH8</div><div>Kunpeng Liu</div>
-      <div class="slot">UH9</div><div>Kanthi K. Sarpatwar</div>
-      <div class="slot">UH10</div><div>Zhou Yang</div>
-      <div class="slot">UH11</div><div>Senjuti Basu Roy</div>
-      <div class="slot">UH12</div><div>Meikang Qiu</div>
-    </div>
-  </details>
-</div>
+		<div class="chairs-card" aria-label="Session Chairs 16:00–17:30">
+		  <details open>
+		    <summary>Session Chairs — UH7–UH12</summary>
+		    <div class="chairs-grid">
+		      <div class="chairs-pair"><div class="slot">UH7</div><div class="name">Yi He</div></div>
+		      <div class="chairs-pair"><div class="slot">UH8</div><div class="name">Kunpeng Liu</div></div>
+		      <div class="chairs-pair"><div class="slot">UH9</div><div class="name">Kanthi K Sarpatwar</div></div>
+		      <div class="chairs-pair"><div class="slot">UH10</div><div class="name">Zhou Yang</div></div>
+		      <div class="chairs-pair"><div class="slot">UH11</div><div class="name">Senjuti Basu Roy</div></div>
+		      <div class="chairs-pair"><div class="slot">UH12</div><div class="name">Meikang Qiu</div></div>
+		    </div>
+		  </details>
+		</div>
+
 
 
       <!-- Room A -->
@@ -1339,6 +1377,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
