@@ -135,6 +135,23 @@
 	  margin-left:92px; margin-bottom:6px;
 	}
 
+	  /* 小字链接 */
+	.small { font-size: 0.9em; color: var(--muted, #5b6b7b); }
+	.small a { color: inherit; text-decoration: underline; }
+	
+	/* oral 详情区块与返回链接 */
+	.oral-details { margin-top: 2rem; }
+	.oral-details .small a { text-decoration: none; }
+	.oral-details .small a:hover { text-decoration: underline; }
+	
+	/* 房间位置 legend */
+	.legend{ margin:8px 0 12px; font-size:14px; color:var(--muted, #556); }
+	.legend .tag{
+	  display:inline-block; margin:2px 6px 2px 0; padding:2px 8px;
+	  background:#f7f9fc; border:1px solid #dbe3f1; border-radius:9999px;
+	}
+
+	  
 	  /* ---- Oral Session Chairs (accordion) ---- */
 	.session-chairs{ margin-top:14px; }
 	.session-chairs details{
@@ -516,7 +533,21 @@
 		  </td>
 		  <td>All Authors</td>
 		</tr>
-<tr>
+
+		  <!-- 14:00–15:30 -->
+		<tr>
+		  <td>14:00–15:30</td>
+		  <td>
+		    Oral Presentations <span class="small">(12 mins × 7 papers × 6 rooms)</span><br>
+		    <span class="small">Rooms A–F · Locations see details</span>
+		  </td>
+		  <td>
+		    Oral Sessions:<br>
+		    <a class="small" href="#oral-1400">See sessions →</a>
+		  </td>
+		</tr>
+		  
+<!-- <tr>
   <td colspan="3">
     <div class="oral-accordion" id="oral-1400">
       <h4>14:00–15:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
@@ -691,7 +722,7 @@
       </details>
     </div>
   </td>
-</tr>
+</tr> -->
 
 		<!-- Afternoon Coffee Break -->
 		<tr>
@@ -702,7 +733,20 @@
 		  </td>
 		  <td>—</td>
 		</tr>
-<tr>
+		<!-- 16:00–17:30  -->
+		<tr>
+		  <td>16:00–17:30</td>
+		  <td>
+		    Oral Presentations <span class="small">(12 mins × 7 papers × 6 rooms)</span><br>
+		    <span class="small">Rooms A–F · Locations see details</span>
+		  </td>
+		  <td>
+		    Oral Sessions:<br>
+		    <a class="small" href="#oral-1600">See sessions →</a>
+		  </td>
+		</tr>
+	
+<!-- <tr>
   <td colspan="3">
     <div class="oral-accordion" id="oral-1600">
       <h4>16:00–17:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
@@ -865,7 +909,7 @@
       </details>
     </div>
   </td>
-</tr>
+</tr> -->
 
         <tr>
           <td>17:30</td>
@@ -881,6 +925,358 @@
 
   <hr class="sep" />
 </section>
+
+<!-- ========== Oral Details: 14:00–15:30 ========== -->
+<section id="oral-1400" class="oral-details" aria-labelledby="oral-1400-h3">
+  <h3 id="oral-1400-h3">Oral Presentations · 14:00–15:30</h3>
+  <p class="small"><a href="#program-h2">← Back to agenda</a></p>
+
+  <!-- Room locations -->
+  <div class="legend" aria-label="Room locations">
+    <span class="tag"><strong>Room A</strong> — Federal A</span>
+    <span class="tag"><strong>Room B</strong> — Federal B</span>
+    <span class="tag"><strong>Room C</strong> — South American A</span>
+    <span class="tag"><strong>Room D</strong> — South American B</span>
+    <span class="tag"><strong>Room E</strong> — New York</span>
+    <span class="tag"><strong>Room F</strong> — Massachusetts</span>
+  </div>
+
+  <div class="oral-accordion">
+    <h4>14:00–15:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
+    <div class="acc-tools">
+      <button class="acc-btn" type="button"
+        onclick="document.querySelectorAll('#oral-1400 details.acc').forEach(d=>d.open=true)">
+        Expand all
+      </button>
+      <button class="acc-btn" type="button"
+        onclick="document.querySelectorAll('#oral-1400 details.acc').forEach(d=>d.open=false)">
+        Collapse all
+      </button>
+    </div>
+
+    <!-- Session Chairs (14:00–15:30) -->
+    <div class="chairs-card" aria-label="Session Chairs 14:00–15:30">
+      <details open>
+        <summary>Session Chairs — UH1–UH6</summary>
+        <div class="chairs-grid">
+          <div class="chairs-pair"><div class="slot">UH1</div><div class="name">Sanjay Madria</div></div>
+          <div class="chairs-pair"><div class="slot">UH2</div><div class="name">C.T. (Chang-Tien) Lu</div></div>
+          <div class="chairs-pair"><div class="slot">UH3</div><div class="name">Fang Jin</div></div>
+          <div class="chairs-pair"><div class="slot">UH4</div><div class="name">Haibing Lu</div></div>
+          <div class="chairs-pair"><div class="slot">UH5</div><div class="name">Mohammad Ali Javidian</div></div>
+          <div class="chairs-pair"><div class="slot">UH6</div><div class="name">Long Nguyen</div></div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Room A -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room A</span>
+        <span class="ids">S01287, S01286, S01285, S01242, S01241, S01282, S01281</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room A · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01287</code></td><td>Can Small Quantized VLMs Drive? An Experimental Evaluation of Small Quantized VLMs for Autonomous Driving</td><td>Samson Mathew</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01286</code></td><td>Data Insights into Teen Consumer Trends: From Kaggle to Knoxville</td><td>Chuanren Liu</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01285</code></td><td>An Empirical Approach Toward Understanding the Impact of Essential Oils on Alzheimer's Disease Progression</td><td>Khalil Al-Hussaeni</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01242</code></td><td>Assessing Bias Within Diabetes Risk Prediction in Machine Learning Techniques</td><td>Ayesha Faruki</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01241</code></td><td>Heatwaves and Health Risks in New York City</td><td>Jie Yang</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01282</code></td><td>Interpretable Feature Mining for AI Product Design</td><td>Vivian Foutz</td></tr>
+            <tr><td>7</td><td>14:00–15:30</td><td><code>S01281</code></td><td>QuizWhiz: An End-to-End AI-Powered Educational Platform for K-12 Intelligent Tutoring and Teaching Analytics</td><td>Ming Zhang</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room B -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room B</span>
+        <span class="ids">S01280, S01279, S01278, S01277, S01276, S01275, S01274</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room B · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01280</code></td><td>Early Wildfire Detection with UAVs using a Frame Difference Method</td><td>Brian Hong</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01279</code></td><td>FS-PREM: A Physics-Aware Framework for Predicting Port Disruption</td><td>Shriraghav Ashok</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01278</code></td><td>Privacy-First Triage Classification with Open-Weight LLMs: A Chain-of-Thought Distillation Approach</td><td>Zeyuan Zhao</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01277</code></td><td>DETECT: Data-Driven Evaluation of Treatments Enabled by Classification Transformers</td><td>Yuanheng Mao</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01276</code></td><td>SmartPharynx: A Camera-Based Smartphone System for Screening of Bacterial Pharyngitis with a Low-Shot CycleGAN and Custom CNN</td><td>Srikar Kovvali</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01275</code></td><td>An Analysis of Gender-Based Differential Item Functioning in the PISA 2018 and 2022 Cycles</td><td>Isabel Xiong</td></tr>
+            <tr><td>7</td><td>14:00–15:30</td><td><code>S01274</code></td><td>A Critical Analysis of a Multi-Input CNN Architecture for Quantum-Enhanced Forecasting</td><td>Ateef Mahmud</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room C -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room C</span>
+        <span class="ids">S01273, S01271, S01269, S01267, S01264, S01263</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room C · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01273</code></td><td>Towards Robust Anomaly Detection in Fish Behavior: Hybrid LLM–ML Ensembles and Federated Learning</td><td>Qiong Cheng</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01271</code></td><td>Transforming Color Correction for Colorblindness with Hydrodynamic Modeling and Deep Learning-Based Validation</td><td>Lucas Yang</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01269</code></td><td>Comparative Analysis of GraphCast and the Global Forecast System Using Real-Time Mesoscale Analysis</td><td>Jonathan Yu</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01267</code></td><td>Learning for Inflation Forecasting with Dynamic Feature Spaces</td><td>Zakariyya Scavotto</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01264</code></td><td>Predicting Residual Cognitive Deficit Post-Ischemic Stroke: An Imbalance-Aware Machine Learning Pipeline on EHR Data</td><td>Sirichandana Yakkala</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01263</code></td><td>A ResNet and ViT-U-Net Hybrid Model for Accurate FVM Flooding Simulations</td><td>Isabella Cho</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room D -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room D</span>
+        <span class="ids">S01262, S01261, S01260, S01258, S01257, S01256</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room D · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01262</code></td><td>AI-Assisted Safe Drop Zone Identification for Human-Guided Drone Deliveries</td><td>Atharva Kakatkar</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01261</code></td><td>Adaptive Execution Scheduler for DataDios SmartDiff</td><td>Aryan Poduri</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01260</code></td><td>Contrastive Retrieval Augmented In-Context Learning for Medical Classification Tasks with Imbalanced Data</td><td>Swarnika Joshi</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01258</code></td><td>Graph Perspective on Multi-modal Mouse Neural Data and Behavior Analysis</td><td>Wenhao Hu</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01257</code></td><td>Efficient Semantic-based Video Segment Querying</td><td>ziqi Zhou</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01256</code></td><td>Enhancing Radiographic Disease Detection with MetaCheX, a Context-Aware Multimodal Model</td><td>Nathan He</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room E -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room E</span>
+        <span class="ids">S01255, S01254, S01253, S01252, S01251, S01250</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room E · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01255</code></td><td>Statistical Mining of Patient Reviews for Geographic Insights on Quality of Urological Care: A Pilot Study</td><td>Max Yu</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01254</code></td><td>Enhancing On-Chip Learning for RRAM Devices Through Evolutionary Theories</td><td>Xinghui Zhao</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01253</code></td><td>Application of Object Segmentation Model in Contact Angle Measurement for Hydrophobicity Determination</td><td>Joann Xie</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01252</code></td><td>Hybrid BiLSTM-RF Framework for Lithium-ion Battery State of Health and RUL Prediction</td><td>Irene Lu</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01251</code></td><td>Uncertainty Quantification in Deep Learning based Breast Cancer Diagnosis using DCE-MRI and TRAMs</td><td>Jerry Wang</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01250</code></td><td>MetaRef: A Generalizable Physics-Aware Refinement Framework for Metamaterial Design</td><td>Alexander Lu</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room F -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room F</span>
+        <span class="ids">S01249, S01248, S01246, S01245, S01244, S01243, DM556</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room F · 14:00–15:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>14:00–15:30</td><td><code>S01249</code></td><td>Few-Shot Learning Meets Large Language Models: Mining Medicine Interventions From Reddit</td><td>Fang Jin</td></tr>
+            <tr><td>2</td><td>14:00–15:30</td><td><code>S01248</code></td><td>Assessing Cognitive Biases in LLMs for Judicial Decision Support: Virtuous Victim and Halo Effects</td><td>Sierra Liu</td></tr>
+            <tr><td>3</td><td>14:00–15:30</td><td><code>S01246</code></td><td>FinFraud-LLM: Exploring Large Language Models for Financial Fraud Detection</td><td>Johnson Chen</td></tr>
+            <tr><td>4</td><td>14:00–15:30</td><td><code>S01245</code></td><td>Can Reasoning LLMs Eliminate Conformity in Multi-Agent Systems?</td><td>Alina Liu</td></tr>
+            <tr><td>5</td><td>14:00–15:30</td><td><code>S01244</code></td><td>Echo State Networks in Reservoir Computing: Foundations, Benchmarks, and Applications to Next-G Wireless Communication</td><td>Andrew Liu</td></tr>
+            <tr><td>6</td><td>14:00–15:30</td><td><code>S01243</code></td><td>Interpretable Deep Learning Framework for the Diagnosis of Age-Related Macular Degeneration</td><td>Anvitaa Rudharraju</td></tr>
+            <tr><td>7</td><td>14:00–15:30</td><td><code>DM556</code></td><td>Explainable Skill Acquisition over Time via GraphRAG-Augmented Mastery Features, Fuzzy Clustering, and Hybrid Deep Models</td><td>Qiong Cheng</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<!-- ========== Oral Details: 16:00–17:30 ========== -->
+<section id="oral-1600" class="oral-details" aria-labelledby="oral-1600-h3">
+  <h3 id="oral-1600-h3">Oral Presentations · 16:00–17:30</h3>
+  <p class="small"><a href="#program-h2">← Back to agenda</a></p>
+
+  <!-- Room locations -->
+  <div class="legend" aria-label="Room locations">
+    <span class="tag"><strong>Room A</strong> — Federal A</span>
+    <span class="tag"><strong>Room B</strong> — Federal B</span>
+    <span class="tag"><strong>Room C</strong> — South American A</span>
+    <span class="tag"><strong>Room D</strong> — South American B</span>
+    <span class="tag"><strong>Room E</strong> — New York</span>
+    <span class="tag"><strong>Room F</strong> — Massachusetts</span>
+  </div>
+
+  <div class="oral-accordion">
+    <h4>16:00–17:30 · Oral Presentations（12 mins × 7 papers × 6 rooms）</h4>
+    <div class="acc-tools">
+      <button class="acc-btn" type="button"
+        onclick="document.querySelectorAll('#oral-1600 details.acc').forEach(d=>d.open=true)">
+        Expand all
+      </button>
+      <button class="acc-btn" type="button"
+        onclick="document.querySelectorAll('#oral-1600 details.acc').forEach(d=>d.open=false)">
+        Collapse all
+      </button>
+    </div>
+
+    <!-- Session Chairs (16:00–17:30) -->
+    <div class="chairs-card" aria-label="Session Chairs 16:00–17:30">
+      <details open>
+        <summary>Session Chairs — UH7–UH12</summary>
+        <div class="chairs-grid">
+          <div class="chairs-pair"><div class="slot">UH7</div><div class="name">Yi He</div></div>
+          <div class="chairs-pair"><div class="slot">UH8</div><div class="name">Kunpeng Liu</div></div>
+          <div class="chairs-pair"><div class="slot">UH9</div><div class="name">Kanthi K Sarpatwar</div></div>
+          <div class="chairs-pair"><div class="slot">UH10</div><div class="name">Zhou Yang</div></div>
+          <div class="chairs-pair"><div class="slot">UH11</div><div class="name">Senjuti Basu Roy</div></div>
+          <div class="chairs-pair"><div class="slot">UH12</div><div class="name">Meikang Qiu</div></div>
+        </div>
+      </details>
+    </div>
+
+    <!-- Room A -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room A</span>
+        <span class="ids">S01284, S01283, S01240, S01239, S01238, S01237, S01236</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room A · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>S01284</code></td><td>Multi-optimizer Deep&amp;Cross at Industrial Scale</td><td>Mark znidar</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01283</code></td><td>Multi-Modal Embedding Fusion for Scalable Context-First CTR</td><td>Mark znidar</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01240</code></td><td>A Deep Learning Approach for Reaction-Diffusion-Advection Modeling of Vegetation-Desertification Patterns</td><td>Aritro Chatterjee</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01239</code></td><td>Dynamics of Fencer Rating Progression</td><td>Ethan Xu</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01238</code></td><td>ESN-DAGMM: A Lightweight Framework for Unsupervised Time-Series Data Monitoring in 5G O-RAN Networks</td><td>Raymond Zhao</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01237</code></td><td>Deep Gaussian Fusion Network for Traffic Prediction</td><td>Zhiqian Chen</td></tr>
+            <tr><td>7</td><td>16:00–17:30</td><td><code>S01236</code></td><td>Quantifying Biopharma Alliance Fragility Using a Strategic Shock Risk Index (SSRI)</td><td>Rhea Zhou</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room B -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room B</span>
+        <span class="ids">S01235, S01234, S01233, S01232, S01231, S01230, S01229</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room B · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>S01235</code></td><td>Do You Know What I Mean? Testing the Prompt Robustness of an LLM-Powered IoT System</td><td>Xingguo Ding</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01234</code></td><td>Interactive 3D Spine Modeling for Enhanced Doctor-Patient Communication and Health Literacy</td><td>Christian Jin</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01233</code></td><td>AI or humans: Who understands online emotions Better?</td><td>Victor Tang</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01232</code></td><td>Mining Mobile Point-of-Interest Visit Data for Socioeconomic Insights</td><td>Amy Ma</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01231</code></td><td>An Agentic Framework for Social Event Forecasting: Approaches using Causality Contextualized Chain of Thought</td><td>Avani Thakur</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01230</code></td><td>Data-Driven Weakly-Supervised Methods Successfully Denoise Diverse Biomedical Imaging Modalities</td><td>Reeti Rout</td></tr>
+            <tr><td>7</td><td>16:00–17:30</td><td><code>S01229</code></td><td>Lost in Transcription: Influence of Dialect on Whisper’s Performance</td><td>Helen Qin</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room C -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room C</span>
+        <span class="ids">DM314, S01228, S01227, S01226, S01224, S01223, S01222</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room C · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>DM314</code></td><td>Benchmarking LLMs and Distributed Approaches for Anomaly Detection</td><td>Qiong Cheng</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01228</code></td><td>Grounded Chest X-Ray Reasoning: Leveraging Visual Tools to Improve Medical Multimodal LLMs</td><td>Huaxiu Yao</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01227</code></td><td>Bringing Optimization to Everyone: Exploring LLMs as a Tool for Non-Experts and Students</td><td>Winston Zhang</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01226</code></td><td>Deep Learning to Denoise and Segment Air Pollutant Plumes</td><td>Daniel Li</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01224</code></td><td>EEG EyeNet: Strong, Insightful Baselines for Eye-Movement Prediction from EEG</td><td>Christian Jin</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01223</code></td><td>Automated Analysis of Astrocyte Cell Connectivity after Laser Ablation Using Machine Learning and Path-Finding Algorithms</td><td>Connor Lee</td></tr>
+            <tr><td>7</td><td>16:00–17:30</td><td><code>S01222</code></td><td>Predicting Vertical Cloud Type Structure with GOES-ABI Multi-Channel Data (Deep Learning &amp; Foundation Model)</td><td>Sidh Jaddu</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room D -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room D</span>
+        <span class="ids">S01221, S01220, S01219, S01218, S01217, S01216</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room D · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>S01221</code></td><td>Multimodal Foundation Models as Router Models for High-Resolution Aerial Image Segmentation</td><td>Cooper Li</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01220</code></td><td>Forecasting U.S. Recessions with Machine Learning: Evidence from Ten Economic Indicators, 1978–2025</td><td>Neel Dhuruva</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01219</code></td><td>C-Reactive Protein Induces Endothelial Cell Dysfunction and Replication Stress</td><td>Jay Peng</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01218</code></td><td>Systematic Comparison of Artifact Removal Techniques for Reliable Feature Extraction from scTS-Contaminated EMG</td><td>Vivian Li</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01217</code></td><td>Graph-LLM for EHRs: Combining Temporal Graph Representations and LLM-Based Note Imputation for Clinical Predictions</td><td>Michael Liu</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01216</code></td><td>LLMSeqRec: LLM Enhanced Contextual Sequential Recommender</td><td>Connor Lee</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room E -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room E</span>
+        <span class="ids">S01215, S01214, S01213, S01212, S01211, S01210</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room E · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>S01215</code></td><td>Benchmarking the Code Generation Capabilities of Popular Large Language Models for Front-End Web Development</td><td>Dron Datta</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01214</code></td><td>Persona-Driven LLM Interaction in Stock Market Simulations</td><td>Medhashree Parhy</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01213</code></td><td>Evaluating the Effectiveness of Persona Simulation in Opinion Prediction with GPT-4.1</td><td>Sarah Li</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01212</code></td><td>AI-Powered Trait Analysis for Poisonous Mushroom Classification</td><td>Srikar Akundi</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01211</code></td><td>Machine Learning-Based Classification of Transcriptional Gene Groups for Cancer Prognosis</td><td>Annie Wu</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01210</code></td><td>Performance Evaluation of Convolutional Neural Networks in Image-Based Malware Classification</td><td>Raymond Jiang</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+    <!-- Room F -->
+    <details class="acc">
+      <summary>
+        <span class="sec">Room F</span>
+        <span class="ids">S01208, S01207, S01206, S01204, S01203, S01201</span>
+      </summary>
+      <div class="acc-body">
+        <table class="acc-table" aria-label="Room F · 16:00–17:30">
+          <thead><tr><th>#</th><th>Time</th><th>Paper ID</th><th>Title</th><th>Contact</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>16:00–17:30</td><td><code>S01208</code></td><td>Signature vs. Substance: Evaluating the Balance of Adversarial Resistance and Linguistic Quality in Watermarking Large Language Models</td><td>William Guo</td></tr>
+            <tr><td>2</td><td>16:00–17:30</td><td><code>S01207</code></td><td>Hyperspectral Band Selection with Learnable Weights for Efficient Glioblastoma Detection</td><td>Albert Li</td></tr>
+            <tr><td>3</td><td>16:00–17:30</td><td><code>S01206</code></td><td>Dimension Reduction Enhanced Boosting for Imbalanced Data Classification</td><td>Eric Wang</td></tr>
+            <tr><td>4</td><td>16:00–17:30</td><td><code>S01204</code></td><td>Probabilistic Prompts for Zero-shot and Few-shot Large Language Models: An Empirical Study of Patient-reported Outcomes</td><td>Zhong Chen</td></tr>
+            <tr><td>5</td><td>16:00–17:30</td><td><code>S01203</code></td><td>Quantitative Assessment on the Impact of Music on Athletic Performance</td><td>Angela Du</td></tr>
+            <tr><td>6</td><td>16:00–17:30</td><td><code>S01201</code></td><td>Predicting Relationship Stability Using Communication Patterns</td><td>Deepak Gahalot</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+	
 
 	<section id="parent-panel" aria-labelledby="parent-panel-h2">
   <h2 id="parent-panel-h2">Parent Panel — Panelists</h2>
@@ -1482,6 +1878,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
