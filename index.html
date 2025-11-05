@@ -173,6 +173,36 @@
 	.session-chairs .slot{ font-weight:700; color:#4b5a73; }
 	.session-chairs .chair{ color:#10131a; }
 
+	  /* Poster Award Committee 横向两列 */
+#poster-committee .committee-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(240px, 1fr)); /* 两列 */
+  gap: 2rem 3rem;               /* 行/列间距 */
+  align-items: start;
+  justify-items: center;
+}
+
+/* 人物卡片的排版和头像尺寸（可按需微调） */
+#poster-committee .person {
+  text-align: center;
+  max-width: 420px;
+}
+#poster-committee .person .avatar {
+  width: 180px;                 /* 头像直径 */
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 0.75rem;
+}
+
+/* 移动端窄屏时自动回到单列（可保留或删除） */
+@media (max-width: 640px) {
+  #poster-committee .committee-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 
     /* ===== Topics of Interest ===== */
@@ -1956,6 +1986,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
