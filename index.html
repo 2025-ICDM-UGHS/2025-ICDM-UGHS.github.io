@@ -95,6 +95,17 @@
 	  .table{ font-size:14px; }
 	  .table td a{ word-break:break-all; }
 	}
+
+	  <style>
+  .qa-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 1rem; }
+  .qa-list .theme { font-size: 0.95rem; color: var(--muted, #555); margin-bottom: 0.25rem; }
+  .qa-list .question { line-height: 1.5; }
+  @media (min-width: 720px) {
+    .qa-list li { display: grid; grid-template-columns: 220px 1fr; gap: 1rem; }
+    .qa-list .theme { margin: 0; align-self: start; }
+  }
+</style>
+
 	  
 
 	/* --- Oral details (accordion) --- */
@@ -1369,44 +1380,74 @@
 	    </table>
 	  </div>
 
-	  <section id="parent-panel-themes" aria-labelledby="parent-panel-themes-h3">
-    <h3 id="parent-panel-themes-h3">Discussion Themes</h3>
+<!-- ========== Parent Panel: Themes & Full Questions ========== -->
+<section id="parent-panel-questions" aria-labelledby="parent-panel-questions-h3">
+  <h3 id="parent-panel-questions-h3">Parent Panel — Themes & Full Questions</h3>
+  <p class="small"><a href="#program-h2">← Back to agenda</a></p>
 
-    <ol class="themes-list">
-      <li>
-        <strong>Purpose of AI in K–12:</strong>
-        Using AI tools vs. understanding how AI works (data, algorithms, limitations) vs. learning to code AI.
-      </li>
+  <!-- Optional helper text -->
+  <p class="small">Each item shows the theme keyword and the complete discussion question.</p>
 
-      <li>
-        <strong>Age-appropriate learning:</strong>
-        How to introduce AI concepts at elementary, middle, and high school levels; practical, low-cost home activities.
-      </li>
+  <ol class="qa-list">
+    <li id="q1">
+      <div class="theme"><strong>Theme:</strong> Focus of Learning</div>
+      <div class="question">
+        <strong>Question 1:</strong>
+        Should the focus be on using AI tools (e.g., ChatGPT, Gemini) in daily life and problem solving,
+        understanding how they work (data, algorithms, limitations), or learning how to code AI?
+      </div>
+    </li>
 
-      <li>
-        <strong>AI in school curricula:</strong>
-        Should teachers use AI, students use AI, or both? How to design safe and effective classroom use.
-      </li>
+    <li id="q2">
+      <div class="theme"><strong>Theme:</strong> Age-Appropriate Onramps</div>
+      <div class="question">
+        <strong>Question 2:</strong>
+        What are age-appropriate ways to introduce AI concepts to children across different age groups
+        (elementary, middle, and high school)? Could you suggest a few practical, low-cost activities
+        parents can do at home?
+      </div>
+    </li>
 
-      <li>
-        <strong>Healthy relationship with AI:</strong>
-        Helping children avoid over-reliance and develop balanced, critical thinking around technology.
-      </li>
+    <li id="q3">
+      <div class="theme"><strong>Theme:</strong> Classroom Use</div>
+      <div class="question">
+        <strong>Question 3:</strong>
+        Within school curricula, should we encourage teachers to use AI tools, students to use them, or both?
+      </div>
+    </li>
 
-      <li>
-        <strong>Nurturing interest:</strong>
-        A progressive, step-by-step growth plan for AI learning and exploration.
-      </li>
+    <li id="q4">
+      <div class="theme"><strong>Theme:</strong> Healthy Relationship with AI</div>
+      <div class="question">
+        <strong>Question 4:</strong>
+        How can we help children develop a healthy and balanced relationship with AI—avoiding over-reliance
+        or dependency on the technology for thinking and decision-making?
+      </div>
+    </li>
 
-      <li>
-        <strong>Access to opportunities:</strong>
-        How children can connect with university researchers, industry labs, and AI-for-K-12 programs.
-      </li>
-    </ol>
-  </section>
+    <li id="q5">
+      <div class="theme"><strong>Theme:</strong> Motivation & Pathways</div>
+      <div class="question">
+        <strong>Question 5:</strong>
+        How can we nurture children’s interest in learning about AI? What would a progressive, step-by-step
+        plan for AI education look like?
+      </div>
+    </li>
 
+    <li id="q6">
+      <div class="theme"><strong>Theme:</strong> Access & Resources</div>
+      <div class="question">
+        <strong>Question 6:</strong>
+        How can children access AI learning resources such as university professors, industry researchers,
+        or AI-for-K-12 programs offered by local institutions, research labs, universities, or federal agencies?
+      </div>
+    </li>
+  </ol>
+
+  <p class="small"><a href="#parent-panel-h2">↑ Back to panelists</a></p>
   <hr class="sep" />
 </section>
+
 
 
 
@@ -2076,6 +2117,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
