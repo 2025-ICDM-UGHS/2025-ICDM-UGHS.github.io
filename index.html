@@ -86,25 +86,7 @@
     .agenda tbody td:last-child{ width:220px; }
     @media (max-width: 720px){ .agenda table{ font-size:14px; } .agenda tbody td:first-child,.agenda tbody td:last-child{ width:auto; } }
 
-	/* ---- Parent Panelists table ---- */
-	.table{ width:100%; border-collapse:collapse; border:1px solid #cfd6e4; background:#fff; font-size:16px; }
-	.table th,.table td{ padding:12px 14px; border:1px solid #cfd6e4; vertical-align:top; }
-	.table thead th{ background:#f7f9fc; font-weight:700; }
-	.table caption{ text-align:left; font-weight:800; padding:0 0 10px; }
-	@media (max-width:720px){
-	  .table{ font-size:14px; }
-	  .table td a{ word-break:break-all; }
-	}
 
-	  <style>
-  .qa-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 1rem; }
-  .qa-list .theme { font-size: 0.95rem; color: var(--muted, #555); margin-bottom: 0.25rem; }
-  .qa-list .question { line-height: 1.5; }
-  @media (min-width: 720px) {
-    .qa-list li { display: grid; grid-template-columns: 220px 1fr; gap: 1rem; }
-    .qa-list .theme { margin: 0; align-self: start; }
-  }
-</style>
 
 	  
 
@@ -386,10 +368,28 @@
 
 /* 可选：右上角折叠小三角对齐 */
 .chairs-card[open] summary{ margin-bottom:6px }
-
-
-
 	
+
+
+		/* ---- Parent Panelists table ---- */
+	.table{ width:100%; border-collapse:collapse; border:1px solid #cfd6e4; background:#fff; font-size:16px; }
+	.table th,.table td{ padding:12px 14px; border:1px solid #cfd6e4; vertical-align:top; }
+	.table thead th{ background:#f7f9fc; font-weight:700; }
+	.table caption{ text-align:left; font-weight:800; padding:0 0 10px; }
+	@media (max-width:720px){
+	  .table{ font-size:14px; }
+	  .table td a{ word-break:break-all; }
+	}
+
+
+  .qa-list { margin: 0; padding-left: 1.25rem; display: grid; gap: 1rem; }
+  .qa-list .theme { font-size: 0.95rem; color: var(--muted, #555); margin-bottom: 0.25rem; }
+  .qa-list .question { line-height: 1.5; }
+  @media (min-width: 720px) {
+    .qa-list li { display: grid; grid-template-columns: 220px 1fr; gap: 1rem; }
+    .qa-list .theme { margin: 0; align-self: start; }
+  }
+
 	  
 
     /* ---- Program Co-Chairs ---- */
@@ -2117,6 +2117,7 @@ document.addEventListener('click', function(e){
   <!-- footer removed per request -->
 </body>
 </html>
+
 
 
 
